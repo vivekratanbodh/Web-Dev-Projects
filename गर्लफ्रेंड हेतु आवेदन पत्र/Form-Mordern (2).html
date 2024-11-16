@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application</title>
+    <link rel="stylesheet" href="Template.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('tajm.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-bottom: 2px solid #ccc;
+        }
+
+        header img {
+            height: 70px;
+            margin-right: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .form-container {
+            display: flex;
+            margin: 30px 5%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .form-container .left, .form-container .center, .form-container .right {
+            padding: 20px;
+            width: 33%;
+        }
+
+        .form-container .left {
+            background: #f0f0f0;
+            border-right: 1px solid #ddd;
+        }
+
+        .form-container .center {
+            background: #fff;
+            border-right: 1px solid #ddd;
+        }
+
+        .form-container .right {
+            background: #f0f0f0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="radio"], input[type="date"], select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus, input[type="date"]:focus, select:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        .center input[type="radio"], .center label {
+            width: auto;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+        }
+
+        .center .verify {
+            margin-top: -30px;
+            color: blue;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .right img {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .right input[type="file"] {
+            margin-top: 10px;
+        }
+
+        .affidavit {
+            margin-top: 20px;
+        }
+
+        .affidavit span {
+            display: block;
+            margin-left: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: calc(100% - 20px);
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="goi.png" alt="Government of India">
+    <h1>भारत सरकार - Apply for</h1>
+</header>
+
+<div class="form-container">
+    <div class="left">
+        <label>Appliciant Name</label>
+        <label>Gender</label>
+        <label>Date of Birth</label>
+        <label>Village/Town/City</label>
+        <label>District</label>
+        <label>State</label>
+        <label>Email ID</label>
+        <label>Social Account</label>
+        <label>Mobile Number</label>
+        <label>Anual Income</label>
+    </div>
+    <div class="center">
+        <input type="text" class="name" placeholder="First Name">
+        <input type="text" class="name" placeholder="Last Name">
+        <br>
+        <input type="radio" name="sex" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="sex" id="female">
+        <label for="female">Female</label>
+        <br><br>
+        <select>
+            <option>DD</option>
+            <option>1</option>
+            <option>28</option>
+            <option>31</option>
+        </select>
+        <select>
+            <option>MM</option>
+            <option>1</option>
+            <option>02</option>
+            <option>12</option>
+        </select>
+        <select>
+            <option>YYYY</option>
+            <option>2010</option>
+            <option>2003</option>
+            <option>1990</option>
+        </select>
+        <br>
+        <input type="text" class="address" placeholder="Village/Town/City">
+        <br>
+        <input type="text" class="address" placeholder="District">
+        <br>
+        <input type="text" class="address" placeholder="State">
+        <br>
+        <input type="text" class="email" placeholder="Email">
+        <span>@gmail.com</span>
+        <span class="verify">verify</span>
+        <br>
+        <input type="text" placeholder="Facebook ID">
+        <input type="text" placeholder="Instagram ID">
+        <br>
+        <select>
+            <option>+1</option>
+            <option>+11</option>
+            <option>+21</option>
+            <option>+31</option>
+            <option>+41</option>
+            <option>+51</option>
+            <option>+61</option>
+            <option>+71</option>
+            <option>+81</option>
+            <option>+91</option>
+        </select>
+        <input type="text" placeholder="Mobile Number" maxlength="10">
+        <a href="#" class="verify">verify</a>
+        <br>
+        <input type="text" placeholder="in numbers">
+        <span>₹</span>
+        <br><br>
+        <label>Height</label>
+        <input type="text" placeholder="in cm">
+        <label>Weight</label>
+        <input type="text" placeholder="in kg">
+        <br><br>
+        <label>Mode of Long Drive</label>
+        <input type="checkbox"><label>By Bike</label>
+        <input type="checkbox"><label>By Car</label>
+        <input type="checkbox"><label>By Foot</label>
+        <input type="checkbox"><label>Nothing</label>
+        <br><br>
+        <label>Date every</label>
+        <select>
+            <option>Night</option>
+            <option>1 Week</option>
+            <option>15 Days</option>
+            <option>Month</option>
+        </select>
+        <br><br>
+        <label>Validity Upto</label>
+        <input type="date">
+        <br><br>
+        <div class="affidavit">
+            <input type="checkbox">
+            <span>Affidavit: All the information written above is correct. If there is any conflict, we are responsible.</span>
+        </div>
+        <br><br>
+        <button class="submit-btn">Submit</button>
+    </div>
+    <div class="right">
+        <center>
+            <img src="C:\Users\NC\Documents\Web Designing\user.png" alt="User Image">
+            <br>
+            <input type="file">
+        </center>
+    </div>
+</div>
+
+</body>
+</html>
