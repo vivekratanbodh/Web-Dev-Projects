@@ -1,0 +1,187 @@
+<title>
+	Appliction Form
+</title>
+
+<!body background="sol.png" style="background-size: cover;"></body>
+
+<header>
+	<div style="float: left;">
+		<img src="goi.png" height="70px" width="auto">
+	</div>
+	<div style="float: left; margin-top: 10px;">
+		<span style="font-size: 30; margin-left: 20px;">भारत सरकार</span>
+	</div>
+
+</header>
+<form>
+
+	<label>Appliciant Name</label>
+	<input type="text" class="name" placeholder="First Name" style="margin-left: 85px;">
+	<input type="text" class="name" placeholder="Last Name" style="margin-left: 0px;">
+<br>
+	<label>Sex</label>
+	<input type="radio" style="margin-left: 50px;" name="sex" id="male">
+		<label for="male">Male</label>
+	<input type="radio" name="sex" id="female">
+		<label for="female">Female</label>
+
+	<label style="margin-left: 50px">Height</label>
+	<select style="margin-top: 2.5px; margin-bottom: 2.5px;">
+		<option>100cm</option>
+		<option>135cm</option>
+		<option>172cm</option>
+	</select>
+
+	<label style="margin-left: 50px;">Weight</label>
+	<select>
+		<option>40kg</option>
+		<option>50kg</option>
+		<option>60kg</option>
+	</select>
+<br>
+	<label>Date of Birth</label>
+	<select style="margin-left: 97px;">
+		<option>DD</option>
+		<option>1</option>
+		<option>28</option>
+		<option>31</option>
+	</select>
+	<select>
+		<option>MM</option>
+		<option>1</option>
+		<option>02</option>
+		<option>12</option>
+	</select>
+	<select>
+		<option>YY</option>
+		<option>2010</option>
+		<option>2003</option>
+		<option>1990</option>
+	</select>
+<br>
+	<label>Street/Road/Lane</label>
+	<input type="text" class="address" placeholder="Street/Road/Lane" style="margin-left: 75px;">
+<br>
+	<label>Area/Locality/Sector</label>
+	<input type="text" class="address" placeholder="Area/Locality/Sector" style="margin-left: 47px;">
+<br>
+	<label>Village/Town/City</label>
+	<input type="text" class="address" placeholder="Village/Town/City" style="margin-left: 68px;">
+<br>
+	<label>District</label>
+	<input type="text" class="address" placeholder="District">
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br>
+	<label>Email ID</label>
+	<input type="text" class="Social" placeholder="Email ID" style="width: 300px;">
+	<span style="margin-left: -90px;">@gmail.com</span>
+<br>
+	<label>Facebook ID</label>
+	<input type="text" class="Social" placeholder="Facebook ID">
+<br>
+	<label>Instagram ID</label>
+	<input type="text" class="Social" placeholder="Instagram ID">
+<br>
+	<label>Mobile Number</label>
+	<select>
+		<option>+1</option>
+		<option>+11</option>
+		<option>+21</option>
+		<option>+31</option>
+		<option>+41</option>
+		<option>+51</option>
+		<option>+61</option>
+		<option>+71</option>
+		<option>+81</option>
+		<option>+91</option>
+	</select>
+	<input type="text" placeholder="Mobile Number" maxlength="10" style="margin-left: 1px;">
+	<a href="#" style="text-decoration: none;">verify</a>
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br>
+	<label>State</label>
+	<input type="text" class="address" placeholder="State">
+<br><br><br>
+	<input type="checkbox">
+	<span>Affidebet	:	All the information written above are correct. If their is any conflits between us then only we are responsible.</span>
+<br>
+	<button id="submit">Submit</button>
+</form>
+
+<style type="text/css">
+
+body{
+	font-family: monospace;
+}
+
+header{
+	height: 80px;
+	width: auto%;
+	padding: 2px;
+	display: table-row-group;
+}
+
+form{
+	margin-top: 30px;
+	margin-left: 30px;
+	height: auto;
+	width: 60%;
+	background:;
+}
+
+input[type=text]{
+	outline: #00f;
+	border: 1px solid black;
+	padding: 5px;
+	font-family: monospace;
+	margin: 5px;
+	height: 22px;
+	margin-left: 50px;
+}
+
+input[type=text]:focus{
+	border: 1px solid #00f;
+}
+
+input[class=name]{
+	width: 3.5cm;
+}
+
+input[class=address]{
+	width: 9cm;
+}
+
+select{
+	outline: none;
+	height: 22px;
+	font-family: monospace;
+	color: grey;
+}
+button[id=submit]{
+	margin-top: 10px;
+	padding: 9px 19px;
+	border: none;
+	font-size: 15px;
+	font-family: monospace;
+	color: #00f;
+	background: #fff;
+	cursor: hand;
+	display: inline-block;
+	border-top-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+</style>

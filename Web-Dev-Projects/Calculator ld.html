@@ -1,0 +1,240 @@
+<doctype html>
+<title>Calculator</title>
+
+<div class= "wrap" align="left"><center>
+
+
+<style>
+	body{
+		
+  background:#fff;
+	}
+ *{
+ 	box-sizing: border-box;
+ 	-webkit-box-sizing:border-box;
+ 	-moz-box-sizing:border-box;
+ 	border-radius: 10px;
+
+ }
+
+
+/*--------------------------------------------------------------------------------------------------------------------------------------*/
+
+ .wrap{
+ 	width:25%;
+ 	/*height: 600;*/
+ 	margin-top: 5%;
+ 	margin-left: 35%;
+ 	/*height:80%;*/
+ 	position: fixed;
+ 	
+ 	opacity:0.9;
+
+   background:#fff;
+ 	padding:20px;
+ 	z-index: 40;
+ 	cursor: none;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 10);
+
+}
+
+
+/*-----------------------------------------------------------Display--------------------------------------------------------------------*/
+
+input[type=search]{
+	width:100%;
+	padding: 10px;
+	font-size: 200%;
+	font-weight: lighter;
+	margin-top: 20px;
+	border: 0px;
+	background-color: transparent;
+	font-family: cambria;
+	text-align: right;
+	cursor: none;
+	color: #000;
+}
+
+input[type=display2]{
+	width:100%;
+	padding: 10px;
+	font-size: 400%;
+	font-weight: lighter;
+	margin-top: 20px;
+	border: 0px;
+	background-color: transparent;
+	font-family: cambria;
+	text-align: right;
+	cursor: none;
+	color: #000;
+}
+
+input[type=display]:hover{
+	font-weight: bolder;
+}
+
+
+/*-------------------------------------------------------------0-9 BUTTONS----------------------------------------------------------------*/
+
+
+input[type=button]{
+	width: 49px;
+	/*height: 50px;*/
+	padding:10px;
+	font-size:150%;
+	font-weight: lighter;
+	color: #000;
+	background-color: transparent;
+	border:0;
+
+	cursor: hand;
+	outline: none;
+}
+
+input[type=button]:hover{
+	color:transparent;
+	background-color: transparent;
+	opacity: 1;
+	text-shadow: 5px -5px 1px #000;
+
+	cursor: hand;
+	outline: none;
+
+}
+
+
+/*-----------------------------------------------------------INTIGERS BUTTON-------------------------------------------------------------*/
+
+
+input[class="int"]{
+	width: 49px;
+	/*height: 50px;*/
+	padding:10px;
+	font-size:150%;
+	font-weight: lighter;
+	color: blue;
+	background-color: transparent;
+	border:0;
+
+	cursor: n-resize;
+	outline: none;
+}
+
+input[class="int"]:hover{
+	/*font-size: 200%;*/
+	color:transparent;
+	background-color: transparent;
+	opacity: 1;
+	/*text-align: justify;*/
+	font-weight: bolder;
+	text-shadow: 5px -5px 1px #00f;
+
+	cursor: hand;
+	outline: none;
+
+}
+
+
+/*---------------------------------------------------------------DELETE-----------------------------------------------------------------*/
+
+input[class=clear]{
+	width: 49px;
+	/*height: 50px;*/
+	padding:10px;
+	font-size:150%;
+	font-weight: bolder;
+	color: red;
+	background-color: transparent;
+	border:0;
+
+	cursor: no-drop;
+	outline: none;
+
+	&:focus{
+		outline:none;
+
+}
+
+
+
+
+</style>
+
+
+
+<br><br>
+
+
+
+
+<form name="cal">
+
+<br>
+		<input type="search" disabled="" name="search"  style="opacity: 1;" placeholder="CALCULATOR">
+		<input type="display2" disabled="" name="display2" style="opacity: 1;">
+
+		<hr size="2" color="#808080" width="100%">
+
+<div>
+<br>
+	
+		<input type="submit" style="color:red; :hover{background-color: blue;} " name=" C " value=" C " onclick="cal.display2.value= ''" and onclick="cal.search.value=''" class="clear">&nbsp&nbsp&nbsp
+
+
+		<input type="button" name="button" value=" ( " onclick="cal.search.value+='('">&nbsp&nbsp&nbsp
+		<input type="button" name="button" value=" ) " onclick="cal.search.value+=')'">&nbsp&nbsp&nbsp
+
+		<input type="button" name="button"	value="=" 	onclick="cal.display2.value = eval (cal.search.value), cal.search.value= ' ' " class="int">
+
+<br>
+		<input type="button" name="button"  value="7" color="red" onclick="cal.search.value+='7' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="8"  onclick="cal.search.value+='8' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="9"  onclick="cal.search.value+='9' ">&nbsp&nbsp&nbsp
+
+		<input type="button" name="button"  value="/" onclick="cal.search.value+='/' " class="int">
+
+
+
+<br>
+		<input type="button" name="button"  value="4"  onclick="cal.search.value+='4' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="5"  onclick="cal.search.value+='5' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="6"  onclick="cal.search.value+='6' ">&nbsp&nbsp&nbsp
+
+		<input type="button" name="button"  value="*"	  onclick="cal.search.value+='*' " class="int">
+
+
+
+<br>
+		<input type="button" name="button"  value="1"  onclick="cal.search.value+='1' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="2"  onclick="cal.search.value+='2' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="3"  onclick="cal.search.value+='3' ">&nbsp&nbsp&nbsp
+		
+		<input type="button" name="button"  value="-"  onclick="cal.search.value+='-' " class="int">
+
+
+
+<br>
+
+		<input type="button" name="button"  value="0"  	onclick="cal.search.value+='0' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"  value="00"  onclick="cal.search.value+='00' ">&nbsp&nbsp&nbsp
+		<input type="button" name="button"	value="."	onclick="cal.search.value+='.'  ">&nbsp&nbsp&nbsp
+
+		<input type="button" name="button"	value="+" 	onclick="cal.search.value+='+' " class="int">
+
+
+
+
+
+
+
+
+
+
+
+
+<!--This is End of this Page-->
+
+
+
+
+</div></form></center></div>
